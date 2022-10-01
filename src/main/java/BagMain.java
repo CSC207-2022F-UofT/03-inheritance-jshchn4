@@ -34,11 +34,12 @@ class BagMain {
      * @return The total number of straps of CrossbodyBags.
      */
     public static int countCrossbodyStraps(Bag[] bags) {
+        int total_straps = 0;
         for (Bag bag : bags) {
             if (bag instanceof CrossbodyBag) {
-                return ((CrossbodyBag) bag).getNumberOfStraps();
+                total_straps += ((CrossbodyBag) bag).getNumberOfStraps();
             }
         }
-        return 0;
+        return total_straps;
     }
 }

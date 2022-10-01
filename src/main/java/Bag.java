@@ -78,6 +78,7 @@ public abstract class Bag {
     public void addItem(String item) {
         if (this.getNumberOfContents() < this.getCapacity()) {
             this.contents.add(item);
+            this.numberOfContents ++;
         }
     }
 
@@ -96,6 +97,7 @@ public abstract class Bag {
     public String popItem() {
         String to_remove = this.contents.get(this.contents.size()-1);
         this.contents.remove(to_remove);
+        this.numberOfContents --;
         return to_remove;
     }
 
